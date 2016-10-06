@@ -1,12 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h:form>
+            <p:panelGrid columns="2">
+                <h:outputText value="İl Seçiniz"/>
+                <p:selectOneMenu id="citySelectOneMenu" value="#{beanClass.selectedCity}">
+                    <f:selectItem  itemLabel="İl Seçin" itemValue="#{null}" />
+                    <f:selectItems value="#{beanClass.cities}"/>
+                    <p:ajax update="boroughSelectOneMenu" listener="#{beanClass.fillBoroughList()}"/>
+                </p:selectOneMenu>
+                
+                <h:outputText value="İlçe Seçiniz"/>
+                <p:selectOneMenu id="boroughSelectOneMenu" value="#{beanClass.selectedBorough}">
+                    <f:selectItems value="#{beanClass.boroughs}"/>
+                </p:selectOneMenu>
+            </p:panelGrid>
+        </h:form>
     </h:body>
 </html>
 
