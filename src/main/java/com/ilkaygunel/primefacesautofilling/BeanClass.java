@@ -34,14 +34,17 @@ public class BeanClass {
         istanbulBorough.add("şişli");
         istanbulBorough.add("eyüp");
         istanbulBorough.add("beyoğlu");
+        istanbulBorough.add("beşiktaş");
         
         ankaraBorough.add("keçiören");
         ankaraBorough.add("mamak");
         ankaraBorough.add("sincan");
+        ankaraBorough.add("çinçin");
         
         samsunBorough.add("bafra");
         samsunBorough.add("atakum");
         samsunBorough.add("vezirköprü");
+        samsunBorough.add("havza");
     }
 
     public List<String> getCities() {
