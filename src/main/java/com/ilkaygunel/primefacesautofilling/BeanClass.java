@@ -44,7 +44,7 @@ public class BeanClass {
         samsunBorough.add("bafra");
         samsunBorough.add("atakum");
         samsunBorough.add("vezirköprü");
-        //samsunBorough.add("havza");
+        samsunBorough.add("havza");
     }
 
     public List<String> getCities() {
